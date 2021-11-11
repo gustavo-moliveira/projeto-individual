@@ -1,0 +1,301 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 990px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #727272;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header p:hover {
+    color: #7214B5;
+    transition: 0.3s;
+}
+
+header img {
+    margin: 0 -50px;
+    width: 35px;
+}
+
+header p{
+    display: flex;
+    color: #000;
+}
+
+nav .active a,
+nav a:hover {
+    background-color: #7214B5;
+    border-radius: 5px;
+    color: #fff;
+    transition: 1s;
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 800px;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.banner_headline {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner_headline h1 {
+    color: #fff;
+    font-size: 70px;
+    text-shadow: 0px 2px 0 #555;
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+}
+
+.banner_headline h2 {
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0px 2px 0 #555;
+    margin: 0;
+    padding: 0;
+    max-width: 300px;
+    margin: 30px 0;
+}
+
+.banner_options {
+    height: 210px;
+    display: flex;
+    margin: 0.51px 0;
+}
+
+.banner1,
+.banner2,
+.banner3 {
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.banner1 {
+    border-radius: 20px 0px 0 0;
+    background-color: #fff;
+    flex-direction: row;
+}
+
+.banner2 {
+    background-color: #fff;
+}
+
+.banner3 {
+    border-radius: 0 20px 0 0;
+    background-color: #fff;
+}
+
+.banner_title {
+    display: flex;
+    font-size: 21px;
+    color: #000;
+    margin: 10px 10px;
+    flex-direction: row;
+}
+
+.banner_desc {
+    display: flex;
+    margin: 15px 0;
+    background-image: url(../images/desc.png);
+    height: 130px;
+    background-size: cover;
+}
+
+.banner_image1 {
+    display: flex;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/svg/btc.svg);
+    margin: 0 10px;
+}
+
+.banner_image2 {
+    display: flex;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/svg/eth.svg);
+    margin: 0 10px;
+}
+
+.banner_image3 {
+    display: flex;
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/svg/doge.svg);
+    margin: 0 10px;
+}
+.options_top {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+#geral {
+    display: flex;
+    justify-content: center;    
+}
+
+#geral section {
+    flex: 1;
+    height: 600px;
+    margin: 0 20px 0 0;
+}
+
+#geral aside {
+    flex: 1;
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    height: 90px;
+    justify-content: center;
+}
+
+.about h1{
+    display: flex;
+    justify-content: center;
+}
+
+.about div {
+    display: flex;
+    align-self: center;
+    height: 10px;
+    width: 200px;
+    background-color: #7214B5;
+}
+
+#geral button {
+    width: 100px;
+    height: 50px;
+    border: 0px;
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+}
+
+#geral .facts_button {
+    background-color: #7214B5;
+    color: #fff;
+    font-weight: bold;
+}
+
+#geral .facts_button:hover {
+    background-color: #7214B5;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+#geral .advant_button:hover {
+    background-color: #7214B5;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+    font-weight: bold;
+}
+
+#geral .analytics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#geral .analytics h2{
+    padding: 10px 20px;
+}
+
+#geral h2{
+    color: #7214B5;
+    font-size: 38px;
+    margin: 0;
+}
+
+#geral .analytics_p {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+#geral .analytics_p p {
+    padding: 0 50px;
+    margin: 0;
+}
+
+#geral .read {
+    border: 2px solid #7214B5;
+    color: #7214B5;
+    font-weight: bold;
+}
+
+#geral .read:hover {
+    background-color: #7214B5;
+    color: #fff;
+    transition: 0.5s;
+}
+
+#geral img {
+    margin: 0;
+    width: 400px;
+}
