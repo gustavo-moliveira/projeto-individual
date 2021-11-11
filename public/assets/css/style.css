@@ -152,10 +152,20 @@ nav a:hover {
 .banner_desc {
     display: flex;
     margin: 15px 0;
-    background-image: url(../images/desc.png);
     height: 130px;
-    background-size: cover;
 }
+
+.banner_desc #input_valor {
+    margin: 0 50px;
+    font-size: 38px;
+}
+
+.banner_desc #input_valor2 {
+    margin: 0 -40px;
+    font-size: 38px;
+}
+
+
 
 .banner_image1 {
     display: flex;
