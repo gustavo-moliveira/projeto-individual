@@ -7,6 +7,12 @@
     <title>Projeto Individual</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <script src="./js/script.js"></script>
 </head>
 <body>
 
@@ -42,34 +48,47 @@
                         <div class="banner_image1"></div>
                         <div class="banner_title">Bitcoin</div>
                     </div>
-                    <div class="banner_desc"></div>
+                    <div class="banner_desc">
+                        <h1 class="real">R$</h1>
+                        <h1 id="btc_valor1"></h1>
+                        <h1>.</h1>
+                        <h1 id="btc_valor2"></h1>
+                    </div>
                 </div>
                 <div class="banner2">
                     <div class="options_top">
                         <div class="banner_image2"></div>
                         <div class="banner_title">Ethereum</div>
                     </div>
-                    <div class="banner_desc"></div>
+                    <div class="banner_desc">
+                        <h1 class="real">R$</h1>
+                        <h1 id="eth_valor1"></h1>
+                        <h1>.</h1>
+                        <h1 id="eth_valor2"></h1>
+                    </div>
                 </div>
                 <div class="banner3">
                     <div class="options_top">
                         <div class="banner_image3"></div>
-                        <div class="banner_title">Dogecoin</div>
+                        <div class="banner_title">Litecoin</div>
                     </div>
                     <div class="banner_desc">
-                        <h1 id="input_valor"></h1>
-                        <h1 id="dot"></h1>
-                        <h1 id="input_valor2"></h1>
+                        <h1 class="real">R$</h1>
+                        <h1 id="ltc_valor1"></h1>
+                        <h1>.</h1>
+                        <h1 id="ltc_valor2"></h1>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
     <div class="about">
         <h1>POR QUE A CRIPTOMOEDA?</h1>
 
         <div></div>
     </div>
+
     <section id="geral">
         <div class="container">
             <section>
@@ -131,30 +150,137 @@
         </div>
     </section>
 
-    <div id="msg"></div>
-    <div id="msg2"></div>
+    <section id="news">
+        <div class="container">
+            <section>
+                <div class="widget">
+                    <div class="widget_title">
+                        <div class="widget_title_text">Últimas notícias</div>
+                        <div class="widget_title_bar"></div>
+                    </div>
+                    <div class="widget_body flex">
+                        <article>
+                            <a href="https://www.infomoney.com.br/mercados/criptos-hoje-as-noticias-que-movimentam-as-moedas-digitais-nesta-quinta-feira-111121/" target="_blank">
+                                <div class="news_date">
+                                    <div class="news_date_post">11 NOV 21</div>
+                                </div>
+                                <div class="news_image">
+                                    <img src="./assets/images/news1.jpg" alt="">
+                                </div>
+                                <div class="news_title">
+                                    Bitcoin respira após flash crash de 8,5%
+                                </div>
+                                <div class="news_resume">
+                                    O Bitcoin (BTC) viveu um dia de gangorra ontem ao amanhecer em terreno negativo em meio a uma realização de lucros e pouco depois disparar para uma nova máxima histórica de US$ 69 mil assim que saíram os dados de inflação nos Estados Unidos.
+                                </div>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="https://www.infomoney.com.br/mercados/ethereum-adia-fim-da-mineracao-para-junho-de-2022-entenda/" target="_blank">
+                                <div class="news_date">
+                                    <div class="news_date_post">11 NOV 21</div>
+                                </div>
+                                <div class="news_image">
+                                    <img src="./assets/images/news2.jpg" alt="">
+                                </div>
+                                <div class="news_title">
+                                    Ethereum adia fim da mineração para junho de 2022.
+                                </div>
+                                <div class="news_resume">
+                                    Desenvolvedores do Ethereum (ETH) adiaram pela segunda vez uma atualização que visa colocar um ponto final no processo atual de mineração da criptomoeda ETH. A medida será implementada em dezembro, programando o fim da mineração para junho 2022.
+                                </div>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="https://www.infomoney.com.br/mercados/fan-token-do-flamengo-estreia-no-mercado-bitcoin-com-forte-volume-e-salto-de-80-na-maxima-do-dia/" target="_blank">
+                                <div class="news_date">
+                                    <div class="news_date_post">10 NOV 21</div>
+                                </div>
+                                <div class="news_image">
+                                    <img src="./assets/images/news3.jpg" alt="">
+                                </div>
+                                <div class="news_title">
+                                    Fan token do Flamengo estreia no Mercado Bitcoin com forte volume e salto de 80% na máxima do dia.
+                                </div>
+                                <div class="news_resume">
+                                    Quase um mês após estrear na plataforma Socios.com, o fan token do Flamengo ($MENGO) chegou nesta quarta-feira (10) na plataforma do Mercado Bitcoin, chegando a registrar uma valorização de cerca de 80% em sua máxima do dia.
+                                </div>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="https://economia.uol.com.br/noticias/afp/2021/11/08/mercado-de-criptomoedas-supera-us-3-trilhoes.htm" target="_blank">
+                                <div class="news_date">
+                                    <div class="news_date_post">08 NOV 21</div>
+                                </div>
+                                <div class="news_image">
+                                    <img src="./assets/images/news4.jpg" alt="">
+                                </div>
+                                <div class="news_title">
+                                    Mercado de criptomoedas supera a marca de US$ 3 trilhões pela 1ª vez.
+                                </div>
+                                <div class="news_resume">
+                                    O mercado de criptomoedas superou nesta segunda-feira (8) pela primeira vez a quantia de US$ 3 trilhões, em um contexto de interesse cada vez maior de investidores tradicionais, seduzidos por altas vertiginosas, mas preocupados com a inflação.
+                                </div>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="https://canaltech.com.br/redes-sociais/twitter-pretende-entrar-de-cabeca-no-mundo-do-blockhain-e-das-criptomoedas-201527/" target="_blank">
+                                <div class="news_date">
+                                    <div class="news_date_post">08 NOV 21</div>
+                                </div>
+                                <div class="news_image">
+                                    <img src="./assets/images/news5.jpg" alt="">
+                                </div>
+                                <div class="news_title">
+                                    Twitter pretende entrar de cabeça no mundo do blockhain e das criptomoedas
+                                </div>
+                                <div class="news_resume">
+                                    O Twitter criou uma equipe dedicada para trabalhar em projetos de criptomoedas, blockchain e serviços descentralizados. A divisão é definida como um "centro de excelência" para traçar a estratégia para o futuro do universo cripto na plataforma e deve contar com Tess Rinearson como cabeça, com passagens por startups de criptomoedas como a Interchain, Tendermint e Chain.
+                                </div>
+                            </a>
+                        </article>
+
+                        <article>
+                            <a href="https://www.infomoney.com.br/mercados/criptos-hoje-as-noticias-que-movimentam-as-moedas-digitais-nesta-sexta-feira-051121/" target="_blank">
+                                <div class="news_date">
+                                    <div class="news_date_post">05 NOV 21</div>
+                                </div>
+                                <div class="news_image">
+                                    <img src="./assets/images/news6.png" alt="">
+                                </div>
+                                <div class="news_title">
+                                    Bitcoin estável, Binance Coin ganha força e mais assuntos que vão movimentar o mercado de criptos hoje
+                                </div>
+                                <div class="news_resume">
+                                    O Bitcoin (BTC) opera em estabilidade na manhã desta sexta-feira (5), negociado a US$ 61.852,43, pouco depois de testar novamente a região próxima de US$ 60 mil, na noite de ontem, e a 15 dias desde que bateu a máxima histórica de aproximadamente US$ 67 mil.
+                                </div>
+                            </a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer_area" >
+            
+            <div class="footer_copy">
+                <p>Made by: <a href="https://github.com/gustavo-moliveira" target="_blank">Gustavo Moraes</a></p>
+            </div>
+            <div class="footer_icons">
+                <a href=""><img src="./assets/images/svg/facebook.svg" alt=""></a>
+                <a href=""><img src="./assets/images/svg/twitter.svg" alt=""></a>
+                <a href=""><img src="./assets/images/svg/instagram.svg" alt=""></a>
+            </div>
+        </div>
+
+    </footer>
+    
 </body>
 </html>
 
-<script>
-    setInterval(() => {
-        cripto()
-    }, 1000);
-    function cripto() {
-    fetch(`https://www.mercadobitcoin.net/api/BTC/ticker/`)
-    .then(function (resposta) {
-      
-        resposta.json()
-        .then(function (json) {
-            input_valor.innerHTML = json.ticker.last.slice(0,3)
-            input_valor2.innerHTML = json.ticker.last.slice(3,6)
-            console.log(json);
-        })
-        .catch(function (error) {
-            imagem_pokemon.style.display = 'none'
-            erro_titulo.style.display = 'block'
-            console.log(error);
-        })
-    })
-}
-</script>
