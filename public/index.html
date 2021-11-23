@@ -26,9 +26,9 @@
                 <nav>
                     <ul>
                         <li class="active"><a href="">HOME</a></li>
-                        <li><a href="">PROJETO</a></li>
-                        <li><a href="">CRIPTOMOEDAS</a></li>
-                        <li><a href="">CONTATO</a></li>
+                        <li><a href="./project.html">PROJETO</a></li>
+                        <li><a href="./dashboard/dashboard.html">CRIPTOMOEDAS</a></li>
+                        <li><a href="./contact.html">CONTATO</a></li>
                         <li><a href="./about.html">SOBRE NÓS</a></li>
                     </ul>
                 </nav>
@@ -54,6 +54,10 @@
                         <h1>.</h1>
                         <h1 id="btc_valor2"></h1>
                     </div>
+                    <div class="hours">
+                        <p>Maior preço nas últimas 24 horas: <b id="btc_high1"></b><b id="btc_high2"></b></p>
+                        <p>Menor preço nas últimas 24 horas: <b id="btc_low1"></b><b id="btc_low2"></b></p>
+                    </div>
                 </div>
                 <div class="banner2">
                     <div class="options_top">
@@ -65,6 +69,10 @@
                         <h1 id="eth_valor1"></h1>
                         <h1>.</h1>
                         <h1 id="eth_valor2"></h1>
+                    </div>
+                    <div class="hours">
+                        <p>Maior preço nas últimas 24 horas: <b id="eth_high1"></b><b id="eth_high2"></b></p>
+                        <p>Menor preço nas últimas 24 horas: <b id="eth_low1"></b><b id="eth_low2"></b></p>
                     </div>
                 </div>
                 <div class="banner3">
@@ -78,6 +86,10 @@
                         <h1>.</h1>
                         <h1 id="ltc_valor2"></h1>
                     </div>
+                    <div class="hours">
+                        <p>Maior preço nas últimas 24 horas: <b id="ltc_high1"></b><b id="ltc_high2"></b></p>
+                        <p>Menor preço nas últimas 24 horas: <b id="ltc_low1"></b><b id="ltc_low2"></b></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -86,7 +98,7 @@
     <div class="about">
         <h1>POR QUE A CRIPTOMOEDA?</h1>
 
-        <div></div>
+        <div class="bar"></div>
     </div>
 
     <section id="geral">
@@ -127,7 +139,7 @@
                     As criptomoedas podem ser usadas com as mesmas finalidades do dinheiro físico em si. As três principais funções são servir como meio de troca...
                 </p>
 
-                <button class="read">LEIA MAIS</button>
+                <button class="read" onclick="project()">LEIA MAIS</button>
 
                 <h3>O É BLOCKCHAIN?</h3>
                 <p>
@@ -136,7 +148,7 @@
                     Ela é uma espécie de livro contábil público, armazenado na rede e que funciona como um banco de dados que armazena de forma segura e transparente tudo que é colocado nele, não sendo possível fazer...
                 </p>
 
-                <button class="read">LEIA MAIS</button>
+                <button class="read" onclick="project()">LEIA MAIS</button>
 
                 <h3>O QUE É MINERAÇÃO?</h3>
                 <p>
@@ -145,7 +157,7 @@
                     As informações ficam no chamado pool de mineração esperand...
                 </p>
 
-                <button class="read">LEIA MAIS</button>
+                <button class="read" >LEIA MAIS</button>
             </aside>
         </div>
     </section>

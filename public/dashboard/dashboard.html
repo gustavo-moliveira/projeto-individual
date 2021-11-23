@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="shortcut icon" href="../assets/icon/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto | Dashboards</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="dashboards.css">
+    
+    <script src="../js/funcoes.js"></script>
+
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- scripts do Chart.js -->
+    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+
+</head>
+
+<body onload="validarSessao(), atualizarFeed()">
+    <!-- <body onload="validarSessao()"> -->
+
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <a href=""><img src="../assets/images/svg/snapsvg-seeklogo.com.svg" alt=""></a>
+                    <a href=""><p>CRYPTO</p></a>
+                </div>
+                <div class="menu">
+                    <nav>
+                        <ul>
+                            <li><a href="../index.html">HOME</a></li>
+                            <li><a href="../project.html">PROJETO</a></li>
+                            <li class="active"><a href="">CRIPTOMOEDAS</a></li>
+                            <li><a href="../contact.html">CONTATO</a></li>
+                            <li><a href="../about.html">SOBRE NÓS</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        </div>
+
+            <div class="graph">
+                <canvas id="canvas_grafico"></canvas>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    let proximaAtualizacao;
+
+    window.onload = obterDadosGrafico();
+
+    //verificar_autenticacao();
+
+    // altere aqui como os dados serão exibidos
+    // e como são recuperados do BackEnd
+    function obterDadosGrafico() {
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
+        }
+
+        fetch(`https://www.mercadobitcoin.net/api/BTC/ticker/`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
+                    plotarGrafico(resposta);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+    let label_counter = 0; 
+    // só altere aqui se souber o que está fazendo!
+    function plotarGrafico(resposta) {
+        console.log('iniciando plotagem do gráfico...');
+        // console.log(resposta)
+        var dados = {
+            labels: [],
+            datasets: [
+                {
+                    label: 'Bitcoin',
+                    borderColor: '#32B9CD',
+                    backgroundColor: 'rgba(114, 20, 181, 0.6)',
+                    fill: true,
+                    data: []
+                },
+            ]
+        };
+        
+
+        dados.labels.push(label_counter++);
+        dados.datasets[0].data.push(resposta.ticker.last);
+
+        console.log('JSON',JSON.stringify(dados));
+
+        var ctx = canvas_grafico.getContext('2d');
+        window.grafico_linha = Chart.Line(ctx, {
+            data: dados,
+            //Configurações do gráfico
+            options: {
+                responsive: true,
+                animation: { duration: 500 },
+                hoverMode: 'index',
+                stacked: false,
+                title: {
+                    display: true,
+                    text: 'Histórico de variação - Bitcoin'
+                },
+                scales: {
+                    yAxes: [{
+                        type: 'linear',
+                        display: true,
+                        position: 'left',
+                        ticks: {
+                            beginAtZero: true,
+                            max: 320230,
+                            min: 333232
+                        }
+                    } ],
+                }
+            }
+        });
+
+        //Atualiza os dados de 5 em 5 segundos
+        setTimeout(() => atualizarGrafico(dados), 10000);
+
+    }
+
+    // só mexer se quiser alterar o tempo de atualização
+    // ou se souber o que está fazendo!
+    function atualizarGrafico(dados) {
+
+        fetch(`https://www.mercadobitcoin.net/api/BTC/ticker/`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (novoRegistro) {
+
+                    console.log('dadosss',dados.datasets[0].data)
+                    // tirando e colocando valores no gráfico
+                    if(dados.labels.length == 30 ){
+                        dados.labels.shift()
+                    } // apagar o primeiro
+                    
+                    dados.labels.push(label_counter++); // incluir um novo momento
+                    // dados.datasets[0].data.shift();  // apagar o primeiro de umidade
+                    dados.datasets[0].data.push(novoRegistro.ticker.last); // incluir uma nova medida de umidade // incluir uma nova medida de umidade
+                    
+                    window.grafico_linha.update();
+
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(dados), 10000);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados), 10000);
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+</script>

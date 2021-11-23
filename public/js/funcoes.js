@@ -3,7 +3,6 @@ function validarSessao() {
     // aguardar();
 
     var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
 
     var h1LoginUsuario = document.getElementById("h1_login_usuario");
 

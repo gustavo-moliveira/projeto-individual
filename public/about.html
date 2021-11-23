@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AcquaTec | Cadastro</title>
+    <title>Crypto | Sobre nós</title>
 
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/about.css">
 
     <script src="./js/funcoes.js"></script>
 
@@ -21,33 +23,91 @@
 </head>
 
 <body>
-
-    <div class="banner-login ">
-        <div class="container ">
-            <div class="card medio">
-                <h2>Bem-vindo!</h2>
-                <div class="formulario">
-                    <div id="form_cadastro">
-                        E-mail:
-                        <br>
-                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
-                        <br>
-                        <br>
-
-                        <button class="btn" onclick="cadastrar()">Cadastrar</button>
-                    </div>
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
-                </div>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href=""><img src="./assets/images/svg/snapsvg-seeklogo.com.svg" alt=""></a>
+                <a href=""><p>CRYPTO</p></a>
             </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./project.html">PROJETO</a></li>
+                        <li><a href="./dashboard/dashboard.html">CRIPTOMOEDAS</a></li>
+                        <li><a href="./contact.html">CONTATO</a></li>
+                        <li class="active"><a href="./about.html">SOBRE NÓS</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section id="about_geral">
+
+        <div class="about_introduct">
+            <div class="about-title">
+                <h1>O que temos a dizer sobre nós?</h1>
+                <div class="bar">.</div>
+            </div>
+        </div>
+        
+    </section>
+
+<section id="about_content">
+    <div class="box-text1">
+        <h3 class="content_title">QUAL A IMPORTÂNCIA DE SE MANTER INFORMADO?</h3>
+        
+        <div class="content_text">
+            
+            <p>Com a desinformação, você se encontra perdido e muitas vezes isso pode atrapalhar o entendimento de outra pessoa sobre o assunto, dessa forma, é de suma importância se aprofundar em assuntos e ter embasamento para falar sobre.</p>
+        </div>
+
+        <div>
+            <div class="content_desc">
+                <p>A Crypton vê a informação como algo crucial para o ser humano, por isso prezamos que toda a informação passada através deste site, seja de uma forma suave e de fácil entendimento, a Crypton trabalha com o esse intuito, de facilitar a informação e trazer mais conhecimento independente de quem você é, tudo isso pode ser resumido como a democratização da informação!</p>
+            </div>
+            <img src="./assets/images/svg/about_book.svg" alt="">
+        </div>
+
+        <div class="large-text">
+            <h3>PARA ISSO EXISTIMOS</h3>
         </div>
     </div>
 
+    <div class="box-text2">
+        <h2 class="content_title">Benefícios de se manter informado</h2>
+        <p>aosdoasko</p>
+    </div>
+</section>
+
+<section id="email_section">
+        <div class="banner-login ">
+                <div class="card medio">
+                        <div class="formulario">
+                            <div id="form_cadastro">
+                                <p>E-mail</p>
+                                <br>
+                                <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                                <br>
+                                <br>
+                                
+                                <button class="btn" onclick="cadastrar()">Cadastrar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="div_aguardar" class="loading-div">
+                        <img src="./assets/images/loading_gif.gif" id="loading-gif">
+                    </div>
+                    
+                    <div id="div_erros_login">
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+    
 </body>
 
 </html>

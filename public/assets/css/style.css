@@ -216,14 +216,15 @@ nav a:hover {
     margin: 20px 0;
     height: 90px;
     justify-content: center;
+    align-items: center;
 }
 
-.about h1{
+.about .bar{
     display: flex;
     justify-content: center;
 }
 
-.about div {
+.bar {
     display: flex;
     align-self: center;
     height: 10px;
@@ -410,13 +411,25 @@ footer .footer_area {
     color: #fff;
     transition: 0.3s;
 }
+
 .footer_copy p {
     font-family: 'Montserrat', sans-serif;
     font-size: 15px;
     font-weight: bold;
 }
+
 footer .footer_info img {
     justify-content: center;
     background-color: aqua;
     display: flex;
+}
+
+.hours p{
+    font-size: 13px;
+    margin: 3px 35px;
+    padding: 3px 0;
+}
+
+.hours b {
+    padding: 0 1.8px;
 }

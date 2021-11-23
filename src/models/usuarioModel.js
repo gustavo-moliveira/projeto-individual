@@ -9,7 +9,7 @@ function listar() {
     return database.executar(instrucao);
 }
 
-function entrar(email, nome) {
+function entrar(email) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email)
     var instrucao = `
         SELECT * FROM usuario WHERE email = '${email}';
@@ -18,7 +18,7 @@ function entrar(email, nome) {
     return database.executar(instrucao);
 }
 
-function cadastrar(nome, email) {
+function cadastrar(email) {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", email);
     var instrucao = `
         INSERT INTO usuario (email) VALUES ('${email}');
