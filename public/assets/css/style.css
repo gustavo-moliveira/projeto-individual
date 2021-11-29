@@ -433,3 +433,10 @@ footer .footer_info img {
 .hours b {
     padding: 0 1.8px;
 }
+
+#moedas {
+    margin: 30px 0 -40px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

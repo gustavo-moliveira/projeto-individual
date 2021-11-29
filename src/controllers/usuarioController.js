@@ -26,7 +26,6 @@ function listar(req, res) {
 
 
 function cadastrar(req, res) {
-    var nome = req.body.nomeServer;
     var email = req.body.emailServer;
 
     if (email == undefined) {
