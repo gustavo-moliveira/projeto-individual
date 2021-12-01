@@ -21,6 +21,6 @@ Abra o terminal no linux ou git bash no windows e clone o repositório.
 - Inicie a aplicação com ```npm start```
 
 <div style="display: flex;">
-       <img src="./public/assets/images/svg/logo_git.svg" alt=""> 
+       <img src="./public/assets/images/svg/logo_git.svg" alt="">
        CRYPTON
 </div>
