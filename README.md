@@ -21,5 +21,5 @@ Abra o terminal no linux ou git bash no windows e clone o repositório.
 - Inicie a aplicação com ```npm start```
 
 <div style="display: flex;">
-       <img src="./projeto-individual/assets/images/svg/snapsvg-seeklogo.com.svg" alt="">
+       <img src="./public/assets/images/svg/snapsvg-seeklogo.com.svg" alt="">
 </div>
