@@ -41,7 +41,6 @@
                         <li><a href="../index.html">HOME</a></li>
                         <li><a href="../project.html">PROJETO</a></li>
                         <li class="active"><a href="">CRIPTOMOEDAS</a></li>
-                        <li><a href="../contact.html">CONTATO</a></li>
                         <li><a href="../about.html">SOBRE NÓS</a></li>
                     </ul>
                 </nav>
@@ -56,6 +55,7 @@
         </div>
     </div>
 
+    
     <div class="graph">
         <canvas id="canvas_grafico"></canvas>
     </div>
@@ -201,7 +201,7 @@ function plotarGrafico(resposta,dados) {
     });
 
     //Atualiza os dados de 5 em 5 segundos
-    setTimeout(() => atualizarGrafico(dados, resposta[0].fk_crypto), 10000);
+    setTimeout(() => atualizarGrafico(dados, resposta[0].fk_crypto), );
 
 }
 
@@ -228,11 +228,11 @@ function atualizarGrafico(dados, fk_crypto = 1) {
                 // dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                 window.grafico_linha.update();
 
-                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, fk_crypto), 10000);
+                proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, fk_crypto), 2000);
             });
         } else {
             console.error('Nenhum dado encontrado ou erro na API');
-            proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, fk_crypto), 10000);
+            proximaAtualizacao = setTimeout(() => atualizarGrafico(dados, fk_crypto), 2000);
         }
     })
         .catch(function (error) {
