@@ -19,3 +19,7 @@ Abra o terminal no linux ou git bash no windows e clone o repositório.
 - Entre na pasta do projeto cd ```projeto-individual```
 - Após isso, instale as dependências: ``` npm install ```
 - Inicie a aplicação com ```npm start```
+
+<div style="display: flex;">
+       <img src="./projeto-individual/assets/images/svg/snapsvg-seeklogo.com.svg" alt="">
+</div>
