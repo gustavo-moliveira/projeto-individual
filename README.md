@@ -22,5 +22,4 @@ Abra o terminal no linux ou git bash no windows e clone o repositório.
 
 <div style="display: flex;">
        <img src="./public/assets/images/svg/logo_git.svg" alt="">
-       CRYPTON
 </div>
